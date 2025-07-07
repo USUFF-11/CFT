@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - Compu Fast Technology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        /* Force LTR for form elements */
+        .contact-form,
+        .form-group,
+        .form-row,
+        .form-actions,
+        .form-note,
+        input,
+        select,
+        textarea,
+        button {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+        
+        /* Adjust select arrow position for LTR */
+        .form-group select {
+            background-position: right 15px center;
+            padding-left: 40px;
+            padding-right: 15px;
+        }
+        
+        /* Adjust label position for LTR */
+        .form-group label {
+            left: 15px;
+            right: auto;
+        }
+        
+        .form-group input:focus ~ label,
+        .form-group input:not(:placeholder-shown) ~ label,
+        .form-group textarea:focus ~ label,
+        .form-group textarea:not(:placeholder-shown) ~ label,
+        .form-group select:focus ~ label,
+        .form-group select:not([value=""]) ~ label {
+            left: 10px;
+            right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Compu Fast Technology</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team for any inquiries or support</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Our team is here to answer any questions you may have about our products, services, or business partnerships. Reach out to us and we'll respond as soon as possible.</p>
+                
+                <div class="info-box">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Our Office</h3>
+                            <p>8 Abdel Karim Fahmy Street<br>Hadaeq El Qobba, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Call Us</h3>
+                            <p>+20 106 459 3033</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <p>info@compufasttech.com<br>sales@compufasttech.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>10:00 AM - 6:00 PM<br>Friday Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100063528175884" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/compu-fast-technology/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="firstName" placeholder=" " required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                            <label for="lastName">Last Name</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="inquiry" name="inquiry" required>
+                            <option value="" selected disabled></option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="sales">Sales</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="inquiry">Type of Inquiry</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-note">
+                            We will respond to you within 1-2 working days.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="map-section">
+        <div id="map"></div>
+        <div class="map-overlay">
+            <div class="overlay-content">
+                <h3>Our Headquarters</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 8 Abdel Karim Fahmy Street, Hadaeq El Qobba, Cairo, Egypt</p>
+                <p><i class="fas fa-phone"></i> +20 106 459 3033</p>
+                <p><i class="fas fa-envelope"></i> info@compufasttech.com</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start a Partnership?</h2>
+            <p>Join hundreds of satisfied clients who trust us for their international trade needs.</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button">Request a Quote</a>
+                <a href="tel:+201064593033" class="cta-button secondary">Call Us Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Compu Fast Technology</h3>
+                    <p>Your trusted partner in international trade and export solutions.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100063528175884" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/compu-fast-technology/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Export Services</a></li>
+                        <li><a href="#">Import Services</a></li>
+                        <li><a href="#">Logistics Solutions</a></li>
+                        <li><a href="#">Customs Clearance</a></li>
+                        <li><a href="#">Trade Finance</a></li>
+                        <li><a href="#">Market Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Compu Fast Technology. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-bitcoin"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzOqaneS-5q4CC09itzkFVrTzoUQ4p_r0RIX8OyaPsuR6dxorMr4L9u3tTzr1CVBp5YsQ/exec';
+
+            // Test function to verify Google Script endpoint
+            async function testGoogleScript() {
+                try {
+                    console.log('Testing Google Script connection...');
+                    const response = await fetch(scriptURL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            'Timestamp': new Date().toISOString(),
+                            'First Name': 'Test',
+                            'Last Name': 'User',
+                            'Email': 'test@example.com',
+                            'Phone': '1234567890',
+                            'Subject': 'Test Connection',
+                            'Inquiry Type': 'general',
+                            'Message': 'This is a test message to verify the connection.'
+                        })
+                    });
+                    
+                    const result = await response.text();
+                    console.log('Test response:', result);
+                    alert('Test successful! Check console for details.');
+                    return true;
+                } catch (error) {
+                    console.error('Test failed:', error);
+                    alert('Test failed: ' + error.message);
+                    return false;
+                }
+            }
+
+            // Add test button for debugging
+            const testBtn = document.createElement('button');
+            testBtn.textContent = 'Test Connection';
+            testBtn.style.position = 'fixed';
+            testBtn.style.bottom = '20px';
+            testBtn.style.right = '20px';
+            testBtn.style.zIndex = '1000';
+            testBtn.style.padding = '10px 20px';
+            testBtn.style.backgroundColor = '#ff9800';
+            testBtn.style.color = 'white';
+            testBtn.style.border = 'none';
+            testBtn.style.borderRadius = '4px';
+            testBtn.style.cursor = 'pointer';
+            testBtn.onclick = testGoogleScript;
+            document.body.appendChild(testBtn);
+
+            // Form submission handler
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const submitBtn = form.querySelector('.submit-btn');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                try {
+                    // First test the connection
+                    const connectionTest = await testGoogleScript();
+                    if (!connectionTest) {
+                        throw new Error('Could not connect to the server. Please try again later.');
+                    }
+
+                    // Get form values
+                    const formData = {
+                        'Timestamp': new Date().toISOString(),
+                        'First Name': form.querySelector('[name="firstName"]').value,
+                        'Last Name': form.querySelector('[name="lastName"]').value,
+                        'Email': form.querySelector('[name="email"]').value,
+                        'Phone': form.querySelector('[name="phone"]').value || 'N/A',
+                        'Subject': form.querySelector('[name="subject"]').value,
+                        'Inquiry Type': form.querySelector('[name="inquiry"]').value,
+                        'Message': form.querySelector('[name="message"]').value
+                    };
+
+                    console.log('Sending data:', formData);
+
+                    // Send to Google Sheets
+                    const response = await fetch(scriptURL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const result = await response.text();
+                    console.log('Server response:', result);
+                    
+                    if (!response.ok) {
+                        throw new Error('Server returned an error: ' + result);
+                    }
+
+                    // Show success message
+                    alert('Thank you! Your message has been sent successfully.');
+                    form.reset();
+                    
+                } catch (error) {
+                    console.error('Error!', error);
+                    alert('Error: ' + error.message);
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+            });
+
+            // Initialize map
+            const map = L.map('map').setView([30.0875, 31.2839], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            L.marker([30.0875, 31.2839]).addTo(map)
+                .bindPopup('Compu Fast Technology<br>8 Abdel Karim Fahmy Street')
+                .openPopup();
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
