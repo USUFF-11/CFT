@@ -1,6 +1,6 @@
-# Global Export Solutions - Company Website
+# Compu Fast Technology - Company Website
 
-A modern, responsive website for Global Export Solutions, a fictional international export company. This website showcases the company's services, products, and provides a way for potential clients to get in touch.
+A modern, responsive website for Compu Fast Technology, a leading provider of technology solutions. This website showcases the company's services, products, and provides a way for potential clients to get in touch.
 
 ## Features
 
